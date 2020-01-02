@@ -1,23 +1,32 @@
 grid_params:
   network:
     1: 
-      l1: [10, 'relu', 0.1]
-      l2: [1,'linear',0]
-    2:
-      l1: [20, 'relu', 0.10]
-      l2: [10, 'relu', 0.10]
-      l3: [1,'linear',0]
+      l1: [10, 'relu', 0.1, 0, 0]
+      l2: [1,'linear',0, 0, 0]
+    2: 
+      l1: [10, 'relu', 0.1, 0.02, 0.02]
+      l2: [1,'linear',0, 0, 0]
+    3:
+      l1: [20, 'relu', 0.10, 0, 0]
+      l2: [10, 'relu', 0.10, 0, 0]
+      l3: [1,'linear',0, 0, 0]
+    4:
+      l1: [20, 'relu', 0.10, 0.02, 0.02]
+      l2: [10, 'relu', 0.10, 0.02, 0.02]
+      l3: [1,'linear',0, 0, 0]
   epochs: 
     - 50
     - 100
+    - 150
   batch_size: 
     - 32
+    - 64
   optimizer: 
     - 'adam'
     - 'sgd'
 keras_callbacks: []
 cv_params:
-  n_jobs: 1
-  cv: 4
+  n_jobs: -1
+  cv: 6
   verb: 2
   scoring: 'neg_mean_absolute_error'
