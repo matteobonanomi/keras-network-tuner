@@ -1,4 +1,9 @@
-# data files
+# files
 *.csv
 *.xlsx
-/data/*
+
+# folders
+data/*
+logs/*
+pickles/*
+notebooks/.ipynb_checkpoints/*
