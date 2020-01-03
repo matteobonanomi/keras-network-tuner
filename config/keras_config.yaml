@@ -4,15 +4,22 @@ grid_params:
       l1: [10, 'relu', 0.1, 0, 0]
       l2: [1,'linear',0, 0, 0]
     2: 
-      l1: [10, 'relu', 0.1, 0.02, 0.02]
+      l1: [10, 'relu', 0.1, 0.05, 0]
       l2: [1,'linear',0, 0, 0]
     3:
+      l1: [10, 'relu', 0.1, 0, 0.05]
+      l2: [1,'linear',0, 0, 0]
+    4:
       l1: [20, 'relu', 0.10, 0, 0]
       l2: [10, 'relu', 0.10, 0, 0]
       l3: [1,'linear',0, 0, 0]
-    4:
-      l1: [20, 'relu', 0.10, 0.02, 0.02]
-      l2: [10, 'relu', 0.10, 0.02, 0.02]
+    5:
+      l1: [20, 'relu', 0.10, 0.05, 0.00]
+      l2: [10, 'relu', 0.10, 0.05, 0.00]
+      l3: [1,'linear',0, 0, 0]
+    6:
+      l1: [20, 'relu', 0.10, 0, 0.05]
+      l2: [10, 'relu', 0.10, 0, 0.05]
       l3: [1,'linear',0, 0, 0]
   epochs: 
     - 50
@@ -28,5 +35,5 @@ keras_callbacks: []
 cv_params:
   n_jobs: -1
   cv: 6
-  verb: 2
+  verb: 1
   scoring: 'neg_mean_absolute_error'

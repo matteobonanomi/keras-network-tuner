@@ -1,9 +1,19 @@
 # files
+
 *.csv
+
 *.xlsx
+*.txt
+
+
 
 # folders
+
 data/*
+
 logs/*
+
 pickles/*
+
 notebooks/.ipynb_checkpoints/*
+.idea/*
