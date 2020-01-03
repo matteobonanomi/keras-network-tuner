@@ -32,8 +32,10 @@ grid_params:
     - 'adam'
     - 'sgd'
 keras_callbacks: []
+mode: 'randomized_search' # grid_search | randomized_search
 cv_params:
   n_jobs: -1
   cv: 6
   verb: 1
   scoring: 'neg_mean_absolute_error'
+  n_iter: 10
